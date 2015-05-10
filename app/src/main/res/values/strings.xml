@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Debts</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_debts">Brak długów :-)</string>
+    <string name="title_activity_add_debt">AddDebtActivity</string>
+    <string name="add_bill">Dodaj rachunek</string>
+    <string name="Persons">Osoby</string>
+    <string name="name">Imię</string>
+    <string name="save">Zapisz</string>
+</resources>
