@@ -1,9 +1,13 @@
 package com.myapps.depts;
 
+import android.text.Editable;
+import android.text.TextWatcher;
+
 /**
- * Created by Adrian on 2015-05-07.
+ * author: Adrian
+ * date: 2015-05-07.
  */
-public class Quota {
+public class Quota implements TextWatcher {
 
     public long id;
     public Person person;
@@ -22,5 +26,30 @@ public class Quota {
     public Quota(Person person, float money) {
         this.person = person;
         this.money = money;
+    }
+
+    public Quota setPersonName(String name) {
+        person.name = name;
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return person.toString();
+    }
+
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+        person.name = s.toString();
     }
 }

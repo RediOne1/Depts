@@ -16,7 +16,7 @@ public class DebtsRecyclerViewAdapter extends RecyclerView.Adapter<DebtsRecycler
 
     private List<Debt> debtList;
 
-    public DebtsRecyclerViewAdapter(List<Debt> debtList){
+    public DebtsRecyclerViewAdapter(List<Debt> debtList) {
         this.debtList = debtList;
     }
 

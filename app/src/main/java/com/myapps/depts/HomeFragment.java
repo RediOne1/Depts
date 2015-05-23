@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
         fab.attachToRecyclerView(mRecyclerView);
     }
 
-    private class LoadDebts extends AsyncTask<Void, Void, ArrayList<Debt>>{
+    private class LoadDebts extends AsyncTask<Void, Void, ArrayList<Debt>> {
 
         private DebtsDb debtsDb;
 
@@ -73,8 +73,8 @@ public class HomeFragment extends Fragment {
         protected ArrayList<Debt> doInBackground(Void... params) {
             List<Debt> debts = new ArrayList<>();
             Cursor cursor = debtsDb.getAllDebts();
-            if(cursor != null && cursor.moveToFirst())
-                while(!cursor.isAfterLast()){
+            if (cursor != null && cursor.moveToFirst())
+                while (!cursor.isAfterLast()) {
 
                 }
             return null;

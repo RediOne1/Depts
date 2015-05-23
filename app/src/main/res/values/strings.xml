@@ -9,7 +9,10 @@
     <string name="no_debts">Brak długów :-)</string>
     <string name="title_activity_add_debt">AddDebtActivity</string>
     <string name="add_bill">Dodaj rachunek</string>
-    <string name="Persons">Osoby</string>
+    <string name="persons">Osoby</string>
     <string name="name">Imię</string>
     <string name="save">Zapisz</string>
+    <string name="amount">Kwota</string>
+    <string name="who_paid">Kto płacił?</string>
+    <string name="me">Ja</string>
 </resources>

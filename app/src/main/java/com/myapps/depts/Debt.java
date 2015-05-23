@@ -11,8 +11,8 @@ public class Debt {
 
     public long id;
     public String name;
-    private List<Quota> quotaList;
     public long payerId;
+    private List<Quota> quotaList;
 
     public Debt() {
         quotaList = new ArrayList<>();
@@ -41,9 +41,9 @@ public class Debt {
         return stringBuilder.toString();
     }
 
-    public void setQuotaListFromString(String s){
+    public void setQuotaListFromString(String s) {
         String temp[] = s.split(",");
-        for(String quotaId : temp){
+        for (String quotaId : temp) {
 
         }
     }
