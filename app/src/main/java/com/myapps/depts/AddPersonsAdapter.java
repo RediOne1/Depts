@@ -25,11 +25,10 @@ public class AddPersonsAdapter extends RecyclerView.Adapter<AddPersonsAdapter.Vi
         View v = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.add_person_single_person_layout, parent, false);
 
-        final ViewHolder vh = new ViewHolder(v);
+        ViewHolder vh = new ViewHolder(v);
         vh.name = (EditText) v.findViewById(R.id.single_person_name);
         vh.money = (EditText) v.findViewById(R.id.single_person_money);
         vh.name.addTextChangedListener((AddDebtActivity) parent.getContext());
-        vh.name.addTextChangedListener(quotaList.get(position));
         return vh;
     }
 
@@ -37,6 +36,7 @@ public class AddPersonsAdapter extends RecyclerView.Adapter<AddPersonsAdapter.Vi
     public void onBindViewHolder(ViewHolder viewHolder, int position) {
 
         viewHolder.name.setText(quotaList.get(position).person.name);
+        quotaList.get(position).nameEditText = viewHolder.name;
         float money = quotaList.get(position).money;
         if (money != 0f)
             viewHolder.money.setText(String.format("%.2f", money));

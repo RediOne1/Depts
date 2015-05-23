@@ -1,17 +1,17 @@
 package com.myapps.depts;
 
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.widget.EditText;
 
 /**
  * author: Adrian
  * date: 2015-05-07.
  */
-public class Quota implements TextWatcher {
+public class Quota {
 
     public long id;
     public Person person;
     public float money;
+    public EditText nameEditText;
 
     public Quota() {
         this.person = new Person();
@@ -35,21 +35,8 @@ public class Quota implements TextWatcher {
 
     @Override
     public String toString() {
+        if (nameEditText != null)
+            person.name = nameEditText.getText().toString();
         return person.toString();
-    }
-
-    @Override
-    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-    }
-
-    @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-    }
-
-    @Override
-    public void afterTextChanged(Editable s) {
-        person.name = s.toString();
     }
 }
